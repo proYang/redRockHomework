@@ -1,36 +1,29 @@
 // 1. 创建一个Person类, Person类的对象包含以下功能:
 function Person(name) {
 	this.name = name;
-	this.toString = function () {
-		return this.name;
-	}
+	Person.prototype.count++;
 };
 Person.prototype = {
-	a: 0,
-	get count(){
-		if (this.__proto__===Person.prototype) {
-			this.a=this.a+1;
-			return this.a;
-		}
-	}
-};
+	constructor: Person,
+	toString : function() {
+		return this.name;
+	},
+	count : 0
+}
 var ling = new Person('ling');
 var long = new Person('long');
 
 
 
 
-
-
 // 2. 创建一个复数(Complex)类, 有以下实例方法
 function Complex(n1,n2){
-	if (!isNaN(n1)&& !isNaN(n2)&&n1!==Infinity&&n2!==Infinity) {
+	if (!isNaN(n1)&& !isNaN(n2)&& n1!==Infinity&& n2!==Infinity) {
 		this.a = n1;
 		this.b = n2;
 	} else {
 		this.a = 0;
 		this.b = 0;
-		console.log("输入不合法！");
 	}
 }
 Complex.prototype.mul = function (num) {
@@ -52,7 +45,7 @@ Complex.prototype.mag = function () {
 	var temp =Math.sqrt(this.a*this.a+this.b*this.b)
 	return temp;
 }
-Complex.prototype.mag = function () {
+Complex.prototype.neg = function () {
 	//取反(共轭复数)
 	var temp = new Complex();
 	temp.a = this.a;
