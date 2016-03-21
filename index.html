@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件委托</title>
+	<style>
+		table{
+			margin: 0 auto;
+		}
+		td{
+			height: 100px;
+			width: 100px;
+			background-color: #eee;
+		}
+	</style>
+</head>
+<body>
+	<table id="container">
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		document.getElementById('container').addEventListener('click',function (event) {
+			if (event.target && event.target.nodeName=="TD") {
+				event.target.style.backgroundColor=randomColor();
+			}
+		});
+		function randomColor() { 
+			//随机颜色函数
+			var rand = Math.floor(Math.random( ) * 0xFFFFFF).toString(16); 
+			if(rand.length == 6){ 
+				return "#"+rand; 
+			}else{ 
+				return "#"+randomColor();
+			}
+		}
+	</script>
+</body>
+</html>
