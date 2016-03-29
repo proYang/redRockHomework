@@ -1,1 +1,71 @@
-style.css
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+	margin:0;
+	padding:0;
+	border:0;
+	text-decoration: none;	
+    font-family:"微软雅黑", Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+body{
+	width: 100%;
+}
+section,footer{
+	margin: 0 auto;
+	width: 1280px;
+}
+.new-show{
+	position: relative;
+	float: left;
+	width: 426px;
+	height: 520px;
+	background-color: #e74f4d;
+	font-size: 24px;
+	color: #fff;
+	transition: all 1s;
+}
+.new-show:hover{
+	background-color: #fff;
+	color: #e74f4d;
+}
+.new-show:hover #first-image-girl{
+	left: 426px;
+	opacity: 1;
+}
+.new-show:hover .triangle{
+	border-color: transparent transparent transparent #fff;
+}
+.new-show >section{
+	width: 426px;
+	margin-top: 175px;
+	text-align: center;
+}
+.button{
+	margin: 0 auto;
+	width: 168px;
+	height: 42px;
+	line-height: 40px;
+	box-shadow: 0 0 0 1px #fff;
+	border: 1px solid #e74f4d;
+}
+.triangle{
+	position: absolute;
+	top: 245px;
+	width: 0;
+	height: 0;
+	border-width: 24px;
+	border-color: transparent transparent transparent #e74f4d;
+	border-style: solid;
+	transition: all 1s;
+}
+.image-girl{
+	position: absolute;
+	top: 0;
+	left: 0px;
+	opacity: 0;
+	z-index: 9;
+	transition: all 1s;
+}
+.image-girl >img{
+	width: 426px;
+	height: 520px;
+}
