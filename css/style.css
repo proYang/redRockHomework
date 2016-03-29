@@ -46,6 +46,7 @@ section,footer{
 	line-height: 40px;
 	box-shadow: 0 0 0 1px #fff;
 	border: 1px solid #e74f4d;
+	cursor: pointer;
 }
 .triangle{
 	position: absolute;
