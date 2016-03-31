@@ -23,22 +23,22 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 body{
 	width: 100%;
 }
-section,footer{
+body >section{
 	margin: 0 auto;
 	width: 1280px;
-}
-body >section{
 	overflow: hidden;
 }
 .new-show{
+	padding-top: 164px;
 	position: relative;
 	float: left;
 	width: 424px;
-	height: 520px;
+	height: 355px;
 	border: 1px solid #fff;
 	background-color: #e74f4d;
 	font-size: 24px;
 	color: #fff;
+	text-align: center;
 	transition: all 1s;
 }
 .new-show:hover{
@@ -66,11 +66,6 @@ body >section{
 }
 .new-show:hover .iconline{
 	color: #abaaaa;
-}
-.new-show >section{
-	width: 426px;
-	margin-top: 175px;
-	text-align: center;
 }
 .button{
 	margin: 0 auto;
@@ -211,4 +206,68 @@ hgroup >h6{
 	cursor: pointer;
 	color: #323333;	
 	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+}
+
+#contact{
+	padding-top: 93px;
+	background-color: #32353e;
+	color: #fff;
+	text-align: center;
+}
+#contact >h3{
+	font-weight: normal;
+	margin-bottom: 8px;
+}
+#contact >p{
+	font-weight: normal;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+#contact form input{
+	margin-top: 22px;
+	padding: 0 10px;
+	border: none;
+	height: 39px;
+	width: 409px;
+	outline: none;
+	font-size: 16px;
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+}
+#contact form button{
+	width: 79px;
+	height: 39px;
+	border: none;
+	font-size: 16px;
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+	cursor: pointer;
+}
+#icon-wrap{
+	margin-top: 37px;
+}
+#icon-wrap >i{
+	margin: 0 10px;
+	font-size: 28px;
+	cursor: pointer;
+}
+#about{
+	position: relative;
+	margin-top: 72px;
+	height: 58px;
+	background-color: #2f3038;
+	font-size: 12px;
+	font-weight: normal;
+}
+#about span:nth-child(1){
+	position: absolute;
+	top: 30px;
+	left: 40px;
+}
+#about span:nth-child(2){
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	cursor: pointer;
+}
+#about span:nth-child(2):hover{
+	text-decoration: underline;
 }
