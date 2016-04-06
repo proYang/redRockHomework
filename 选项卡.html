@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		#wrap {
+			margin: 50px auto;
+			width: 400px;
+		}
+		#wrap-title {
+			overflow: hidden;
+		}
+  		#wrap li {
+  			width: 78px;
+			height: 25px;
+			border: 1px solid #eee;		
+			float: left;
+			list-style: none;
+			text-align: center;
+			cursor: pointer;
+			background-color: #eee;
+  		}
+  		#wrap li:hover {
+  			background-color: #fff;
+			border-bottom: #eee;	
+  		}
+  		.content{
+  			width: 400px;
+			height: 300px;
+			display: none;
+  		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="wrap-title">
+			<ul>
+				<li>选项一</li>
+				<li>选项二</li>
+				<li>选项三</li>
+				<li>选项四</li>
+				<li>选项五</li>
+			</ul>
+		</div>
+		<div id="wrap-content">
+			<div class="content"></div>
+			<div class="content"></div>
+			<div class="content"></div>
+			<div class="content"></div>
+			<div class="content"></div>
+		</div>
+	</div>
+</body>
+</html>
