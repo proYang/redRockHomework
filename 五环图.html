@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>五环图</title>
+</head>
+<body>
+	<ul id="container">
+		<li>一环</li>
+		<li>二环</li>
+		<li>三环</li>
+		<li>四环</li>
+		<li>五环</li>
+	</ul>
+	 <button id="myButton">点击</button>
+	 <script>
+	 	window.onload = function () {
+	 		var list = document.querySelectorAll("li");
+	 		var listArr = new Array();
+	 		for (var i = 0; i < list.length; i++) {
+	 			if(list[i].nodeName == "LI") {
+	 				listArr.push(list[i]);
+	 			}  
+	 		}
+	 		change(listArr);
+	 		function change () {
+	 			document.getElementById('myButton').addEventListener('click', function (arguments) {
+	 				listArr[1].style.backgroundColor = "blue";
+	 				listArr[2].style.backgroundColor = "blue";
+	 			});
+	 		}
+	 	}
+	 </script>
+</body>
+</html>

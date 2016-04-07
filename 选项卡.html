@@ -26,35 +26,77 @@
 			cursor: pointer;
 			background-color: #eee;
   		}
-  		#wrap li:hover {
-  			background-color: #fff;
-			border-bottom: #eee;	
+  		.clicked {
+  			background-color: #fff!important;
+			border-bottom: #eee!important;	
   		}
   		.content{
-  			width: 400px;
+  			width: 398px;
 			height: 300px;
 			display: none;
+			border-left: 1px solid #eee;
+			border-right: 1px solid #eee;
+			border-bottom: 1px solid #eee;
+			text-align: center;
   		}
 	</style>
 </head>
 <body>
 	<div id="wrap">
-		<div id="wrap-title">
-			<ul>
-				<li>选项一</li>
-				<li>选项二</li>
-				<li>选项三</li>
-				<li>选项四</li>
-				<li>选项五</li>
-			</ul>
-		</div>
+		<ul id="wrap-title">
+			<li id="title0" class="clicked">选项一</li>
+			<li id="title1">选项二</li>
+			<li id="title2">选项三</li>
+			<li id="title3">选项四</li>
+			<li id="title4">选项五</li>
+		</ul>
 		<div id="wrap-content">
-			<div class="content"></div>
-			<div class="content"></div>
-			<div class="content"></div>
-			<div class="content"></div>
-			<div class="content"></div>
+			<div class="content" style="display: block;">选项一内容区</div>
+			<div class="content">选项二内容区</div>
+			<div class="content">选项三内容区</div>
+			<div class="content">选项四内容区</div>
+			<div class="content">选项五内容区</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+		window.onload=function () {
+			function getChildren(parentId, type) {
+				//获取子节点
+				var childList = document.querySelector(parentId).childNodes;
+				var children = [];
+				for (var i = 0; i < childList.length; i++) {
+					if (childList[i].nodeName == type.toLocaleUpperCase() ) {
+                        children.push( childList[i]);
+					}
+				}
+				return children;
+			}
+			function change(clicked, parentId, type) {
+				var titleList = getChildren('#wrap-title', 'li');
+				//标题子节点
+				var contentList = getChildren('#wrap-content', 'div');
+				//内容子节点
+				for (var i =0; i < titleList.length; i++ ) {
+				//清除之前样式
+					titleList[i].className = "";
+				}
+				for (var i =0; i < contentList.length; i++ ) {
+				//清除之前样式
+					contentList[i].style.display = "none";
+				}
+				//设置选中位置样式
+				clicked.className="clicked";
+				//获取选中位置
+				var address = event.target.id.split('').pop();
+				//显示选中位置对应内容区
+				contentList[address].style.display = "block";
+			}
+			document.querySelector("#wrap-title").addEventListener('click', function (event) {
+				if (event.target && event.target.nodeName == "LI") {
+					change(event.target);
+				}
+			});
+		}
+	</script>
 </body>
 </html>
