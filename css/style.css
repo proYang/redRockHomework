@@ -34,7 +34,7 @@ body{
 	outline: none;
 }
 .container >form >input:focus{
-	box-shadow: 0 0 5px 5px #b3b6ae;
+	box-shadow: 0 0 0 5px #b3b6ae;
 }
 ::-moz-placeholder { 
 	color: #FFF; 
@@ -62,5 +62,5 @@ body{
 	font-size: 14px;
 }
 .container >form >button:active{
-	box-shadow: 0 0 1px 1px #b3b6ae;
+	box-shadow: 0 0 0 1px #b3b6ae;
 }
